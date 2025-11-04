@@ -1,6 +1,30 @@
 @import "tailwindcss";
 
-body{
+body {
   background-color: #000000;
   color: white;
+}
+
+
+.imgRounded {
+  border-radius: 42px 52px 44px / 31px 100px 0px;
+  border: 2px solid black;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.animation {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(0.7);
+    transform-origin: center center;
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
 }
