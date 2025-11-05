@@ -37,6 +37,11 @@ import allSiteMaking9 from './SiteImages/9.png'
 import allSiteMaking10 from './SiteImages/10.png'
 import allSiteMaking11 from './SiteImages/11.png'
 import allSiteMaking12 from './SiteImages/12.png'
+import outlook from './IconFooter/outlook.svg'
+import tg from './IconFooter/tg.svg'
+import vkLogo from './IconFooter/vk-logo.svg'
+import location from './IconFooter/location.svg'
+import whatsapp from './IconFooter/whatsapp.svg'
 
 
 export default function App() {
@@ -156,18 +161,18 @@ export default function App() {
 
   return (
     <div>
-      <header className="h-15 bg-neutral-700 flex justify-around items-center fixed top-0 left-0 w-full z-10" style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
-        <button onClick={scrollToHome} className="flex items-center gap-3 cursor-pointer">
+      <header className="h-15 bg-neutral-700 flex justify-around items-center fixed top-0 left-0 w-full z-40" style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
+        <button onClick={scrollToHome} className="flex items-center gap-3 cursor-pointer transition-all duration-300 hover:brightness-50">
           <img src={logo} alt="logo" className="h-13 brightness-80" />
           <h1 className="text-2xl font-mono">IT developer</h1>
         </button>
         <nav className="flex gap-10 items-center">
-          <button onClick={scrollToHome} className="hidden cursor-pointer lg:flex font-mono text-2xl hover:border-b hover:text-gray-400">Домой</button>
-          <button onClick={scrollToAboutMe} className="hidden cursor-pointer lg:flex font-mono text-2xl hover:border-b hover:text-gray-400">Обо мне</button>
-          <button onClick={scrollToMyStek} className="hidden cursor-pointer lg:flex font-mono text-2xl hover:border-b hover:text-gray-400">Мой стек</button>
-          <button onClick={scrollToMyProject} className="hidden cursor-pointer lg:flex font-mono text-2xl hover:border-b hover:text-gray-400">Мои проекты</button>
-          <button onClick={scrollToContacts} className="hidden cursor-pointer lg:flex font-mono text-2xl hover:border-b hover:text-gray-400">Контакты</button>
-          <button onClick={() => setVisible(!visible)} className="block lg:hidden">
+          <button onClick={scrollToHome} className="hidden strokeText cursor-pointer lg:flex transition-all duration-100 font-mono text-2xl hover:border-b hover:text-gray-400">Домой</button>
+          <button onClick={scrollToAboutMe} className="hidden strokeText cursor-pointer lg:flex transition-all duration-100 font-mono text-2xl hover:border-b hover:text-gray-400">Обо мне</button>
+          <button onClick={scrollToMyStek} className="hidden strokeText cursor-pointer lg:flex transition-all duration-100 font-mono text-2xl hover:border-b hover:text-gray-400">Мой стек</button>
+          <button onClick={scrollToMyProject} className="hidden strokeText cursor-pointer lg:flex transition-all duration-100 font-mono text-2xl hover:border-b hover:text-gray-400">Мои проекты</button>
+          <button onClick={scrollToContacts} className="hidden strokeText cursor-pointer lg:flex transition-all duration-100 font-mono text-2xl hover:border-b hover:text-gray-400">Контакты</button>
+          <button onClick={() => setVisible(!visible)} className="block  lg:hidden">
             <div className="w-7 h-1 rounded-4xl bg-white mb-1"></div>
             <div className="w-7 h-1 rounded-4xl bg-white mb-1"></div>
             <div className="w-7 h-1 rounded-4xl bg-white"></div>
@@ -182,27 +187,27 @@ export default function App() {
             <button onClick={() => {
               scrollToHome();
               setVisible(false);
-            }} className="font-mono block text-center border-b py-4 text-2xl hover:text-gray-400 w-screen">Домой</button>
+            }} className="font-mono strokeText block text-center border-b py-4 text-2xl hover:text-gray-400 w-screen">Домой</button>
             <button onClick={() => {
               scrollToAboutMe();
               setVisible(false);
             }
-            } className="font-mono block text-center border-b py-4 text-2xl hover:text-gray-400 w-screen">Обо мне</button>
+            } className="font-mono strokeText block text-center border-b py-4 text-2xl hover:text-gray-400 w-screen">Обо мне</button>
             <button onClick={() => {
               scrollToMyStek();
               setVisible(false);
             }
-            } className="font-mono block text-center border-b py-4 text-2xl hover:text-gray-400 w-screen">Мой стек</button>
+            } className="font-mono strokeText block text-center border-b py-4 text-2xl hover:text-gray-400 w-screen">Мой стек</button>
             <button onClick={() => {
               scrollToMyProject();
               setVisible(false);
             }
-            } className="font-mono block text-center border-b py-4 text-2xl hover:text-gray-400 w-screen">Мои проекты</button>
+            } className="font-mono strokeText block text-center border-b py-4 text-2xl hover:text-gray-400 w-screen">Мои проекты</button>
             <button onClick={() => {
               scrollToContacts();
               setVisible(false);
             }
-            } className="font-mono block text-center border-b py-4 text-2xl hover:text-gray-400 w-screen">Контакты</button>
+            } className="font-mono strokeText block text-center border-b py-4 text-2xl hover:text-gray-400 w-screen">Контакты</button>
           </nav>
         )}
 
@@ -211,10 +216,10 @@ export default function App() {
           <img src={bg} alt="bg" className="w-full h-full sticky object-cover brightness-40" />
           <div className="block absolute inset-0 text-center text-white justify-around items-center max-w-400 m-auto lg:flex p-2">
             <div className="m-auto">
-              <h1 className="text-3xl animation mt-20 font-bold mb-4 lg:text-6xl lg:mt-0">Здравствуй!</h1>
-              <p className="text-xl animation mb-4 lg:text-3xl">Добро пожаловать на моё портфолио</p>
-              <p className="text-xl animation lg:text-2xl ml-5 mr-5 mb-5">Меня зовут Максим, и я являюсь Frontend разработчиком</p>
-              <button onClick={scrollToContacts} className="border animation p-2 rounded-es-xl cursor-pointer hover:bg-gray-600 mb-5">Связаться со мной</button>
+              <h1 className="text-3xl animation mt-20 font-bold mb-4 lg:text-6xl lg:mt-0 strokeText">Здравствуй!</h1>
+              <p className="text-xl animation mb-4 lg:text-3xl strokeText">Добро пожаловать на моё портфолио</p>
+              <p className="text-xl animation lg:text-2xl ml-5 mr-5 mb-5 strokeText" >Меня зовут Максим, и я являюсь Frontend разработчиком</p>
+              <button onClick={scrollToContacts} className="border animation p-2 rounded-es-xl cursor-pointer  hover:bg-gray-500 mb-5 transition-all duration-300">Связаться со мной</button>
             </div>
             <img className="h-70 rounded imgRounded  shadow-2xl brightness-80 m-auto lg:h-110 border-2 border-black" src={human} alt="" />
           </div>
@@ -225,7 +230,7 @@ export default function App() {
           <img src={bgAboutMe} alt="bg" className="w-full h-full  sticky object-cover brightness-40 blur-[3px]" />
           <div className="absolute inset-0 text-center text-white flex justify-around items-center max-w-400 m-auto">
             <div>
-              <h1 className="text-3xl font-bold mb-4 lg:text-6xl border-b-2 w-40 m-auto lg:w-80">Обо мне</h1>
+              <h1 className="text-3xl font-bold mb-4 lg:text-6xl  w-40 m-auto lg:w-80">Обо мне</h1>
               <p className=" mr-4 ml-4 mb-4 lg:text-2xl max-w-200">Frontend-разработчик с фокусом на React и TypeScript.
                 Пишу декларативный, типизированный и поддерживаемый код с использованием современных практик: компонентный подход, хуки (useState, useEffect, useRef), управление состоянием, так же работа с DOM.
                 Уверенно применяю методы массивов (map, filter, reduce) для трансформации и визуализации данных.
@@ -241,78 +246,83 @@ export default function App() {
           <img src={language} alt="bg" className="w-full h-full  sticky object-cover brightness-40 blur-[2px]" />
 
           <div className="block absolute inset-0 text-center text-white justify-around items-center max-w-400 m-auto lg:flex mt-[5%]">
-            <div className="grid grid-cols-3 gap-5 p-3 max-w-[85%] m-auto mb-5 mt-5 rounded-2xl bg-black/50 rounded-2x xl:max-w-200">
-              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-15 hover:scale-125 lg:h-20 m-auto" src={html} alt="html" loading="lazy" />
-              </a>
-              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={css} alt="css" loading="lazy" />
-              </a>
-              <a href="https://ru.wikipedia.org/wiki/JavaScript" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={js} alt="js" loading="lazy" />
-              </a>
-              <a href="https://www.typescriptlang.org/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={ts} alt="ts" loading="lazy" />
-              </a>
-              <a href="https://react.dev/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={react} alt="react" loading="lazy" />
-              </a>
-              <a href="https://tailwindcss.com/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={tailwind} alt="tailwind" loading="lazy" />
-              </a>
-              <a href="https://getbootstrap.com/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={bootstrap} alt="bootstrap" loading="lazy" />
-              </a>
-              <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={csharp} alt="csharp" loading="lazy" />
-              </a>
-              <a href="https://www.figma.com" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={figma} alt="figma" loading="lazy" />
-              </a>
-              <a href="https://en.wikipedia.org/wiki/Adobe_Photoshop" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={photoshop} alt="photoshop" loading="lazy" />
-              </a>
-              <a href="https://github.com/Fe1exxx" rel="noopener noreferrer" target="_blank" >
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={gitHub} alt="gitHub" loading="lazy" />
-              </a>
-              <a href="https://git-scm.com/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={git} alt="git" loading="lazy" />
-              </a>
-              <a href="https://www.npmjs.com/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={npm} alt="npm" loading="lazy" />
-              </a>
-              <a href="https://vite.dev/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={vite} alt="vite" loading="lazy" />
-              </a>
-              <a href="https://sass-lang.com/guide/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={saas} alt="saas" loading="lazy" />
-              </a>
-              <a href="https://code.visualstudio.com/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={vs} alt="vs" loading="lazy" />
-              </a>
-              <a href="https://zeplin.io/" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={zeplin} alt="zeplin" loading="lazy" />
-              </a>
-              <a href="https://developer.chrome.com/docs/devtools?hl=ru" rel="noopener noreferrer" target="_blank">
-                <img className="h-10 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={devtools} alt="devtools" loading="lazy" />
-              </a>
+            <div className="m-auto">
+              <h1 className="text-4xl strokeText">Мой стек технологий:</h1>
+              <div className="grid grid-cols-3 gap-5 p-3 max-w-[85%] m-auto mb-5 mt-5 rounded-2xl bg-black/50 rounded-2x xl:max-w-200">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-15 hover:scale-125 lg:h-20 m-auto" src={html} alt="html" loading="lazy" />
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={css} alt="css" loading="lazy" />
+                </a>
+                <a href="https://ru.wikipedia.org/wiki/JavaScript" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={js} alt="js" loading="lazy" />
+                </a>
+                <a href="https://www.typescriptlang.org/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={ts} alt="ts" loading="lazy" />
+                </a>
+                <a href="https://react.dev/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={react} alt="react" loading="lazy" />
+                </a>
+                <a href="https://tailwindcss.com/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={tailwind} alt="tailwind" loading="lazy" />
+                </a>
+                <a href="https://getbootstrap.com/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={bootstrap} alt="bootstrap" loading="lazy" />
+                </a>
+                <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={csharp} alt="csharp" loading="lazy" />
+                </a>
+                <a href="https://www.figma.com" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={figma} alt="figma" loading="lazy" />
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Adobe_Photoshop" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={photoshop} alt="photoshop" loading="lazy" />
+                </a>
+                <a href="https://github.com/Fe1exxx" rel="noopener noreferrer" target="_blank" >
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={gitHub} alt="gitHub" loading="lazy" />
+                </a>
+                <a href="https://git-scm.com/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={git} alt="git" loading="lazy" />
+                </a>
+                <a href="https://www.npmjs.com/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={npm} alt="npm" loading="lazy" />
+                </a>
+                <a href="https://vite.dev/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={vite} alt="vite" loading="lazy" />
+                </a>
+                <a href="https://sass-lang.com/guide/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={saas} alt="saas" loading="lazy" />
+                </a>
+                <a href="https://code.visualstudio.com/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={vs} alt="vs" loading="lazy" />
+                </a>
+                <a href="https://zeplin.io/" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={zeplin} alt="zeplin" loading="lazy" />
+                </a>
+                <a href="https://developer.chrome.com/docs/devtools?hl=ru" rel="noopener noreferrer" target="_blank">
+                  <img className="h-10 transition-all duration-300 sm:h-12 hover:scale-125 lg:h-20 m-auto hover:rotate-6" src={devtools} alt="devtools" loading="lazy" />
+                </a>
+              </div>
             </div>
-            <div className=" bg-black/60 p-6 rounded-lg text-white max-w-[85%] max-h-114 m-auto sm:h-90 lg:h-180 lg:max-w-150 lg:max-h-180">
-              <h3 className="text-xl font-bold mb-2">Мои достижения:</h3>
+
+            <div className=" bg-black/60 p-6 rounded-lg overflow-scroll text-white max-w-[85%] max-h-90 m-auto sm:h-80 lg:h-190  lg:max-w-150 lg:overflow-hidden lg:max-h-190">
+              <h3 className="text-xl font-bold mb-2 strokeText">Мои достижения:</h3>
               <ul className="text-sm space-y-1 mb-[5%]">
                 <li className="flex items-center gap-2 mb-4 text-[14px] md:text-[18px] justify-center mt-5"><img src={done} className="h-5"></img> 10+ проектов на React</li>
                 <li className="flex items-center gap-2 mb-4 text-[14px] md:text-[18px] justify-center"><img src={done} className="h-5"></img> 500+ часов практики</li>
                 <li className="flex items-center gap-2 mb-4 text-[14px] md:text-[18px] justify-center"><img src={done} className="h-5"></img> 100% типизированный код</li>
                 <li className="flex items-center gap-2 mb-5 text-[14px] md:text-[18px] justify-center "><img src={done} className="h-5"></img> Умею работать с API</li>
                 <li className="text-[18px]">С нуля до полноценного frontend-разработчика — прошёл путь от базового синтаксиса JavaScript до создания сложных, типизированных React-приложений с использованием современных практик.</li>
-                <li className="text-[18px] hidden lg:block">Полностью типизированные приложения на TypeScript — пишу не просто рабочий, а надёжный и самодокументируемый код с интерфейсами, union-типами и строгой типизацией состояний.</li>
-                <li className="text-[18px] hidden lg:block">Освоил ключевые методы массивов — уверенно использую <code>map</code>, <code>filter</code>, <code>find</code>, <code>reduce</code> для трансформации данных и рендеринга списков.</li>
-                <li className="text-[18px] hidden lg:block">Научился управлять состоянием — через useState, синхронизирую UI с пользовательским вводом и поведением.</li>
-                <li className="text-[18px] hidden lg:block">Собрал и настроил проект с Vite + React + TypeScript + Tailwind CSS — без шаблонов, с пониманием конфигурации и сборки.</li>
-                <li className="text-[18px] hidden lg:block">Создаю адаптивные интерфейсы — макеты корректно отображаются на мобильных, планшетах и десктопах.</li>
+                <li className="text-[18px] mb-3">Полностью типизированные приложения на TypeScript — пишу не просто рабочий, а надёжный и самодокументируемый код с интерфейсами, union-типами и строгой типизацией состояний.</li>
+                <li className="text-[18px] mb-3">Освоил ключевые методы массивов — уверенно использую <code>map</code>, <code>filter</code>, <code>find</code>, <code>reduce</code> для трансформации данных и рендеринга списков.</li>
+                <li className="text-[18px] mb-3">Научился управлять состоянием — через useState, синхронизирую UI с пользовательским вводом и поведением.</li>
+                <li className="text-[18px] mb-3">Собрал и настроил проект с Vite + React + TypeScript + Tailwind CSS — без шаблонов, с пониманием конфигурации и сборки.</li>
+                <li className="text-[18px] mb-3">Создаю адаптивные интерфейсы — макеты корректно отображаются на мобильных, планшетах и десктопах.</li>
               </ul>
             </div>
           </div>
+
         </div>
 
         {/* My projects */}
@@ -320,10 +330,10 @@ export default function App() {
           <img src={myProjects} alt="bg" className="w-full h-full  sticky object-cover brightness-40 blur-[3px]" />
           <div className="absolute inset-0 text-center text-white flex justify-around items-center max-w-400 m-auto">
             <div>
-              <h1 className="text-2xl font-bold lg:text-6xl border-b-2 w-80 m-auto md:text-4xl md:w-120 lg:w-200">Разработанные проекты:</h1>
+              <h1 className="text-2xl font-bold lg:text-6xl strokeText w-80 m-auto md:text-4xl md:w-120 lg:w-200">Разработанные проекты:</h1>
               <div id="indicators-carousel" className="relative w-full">
                 {/* Carousel wrapper */}
-                <div className="relative w-70  h-46 sm:h-75 overflow-hidden m-auto rounded-lg sm:w-140 md:w-170 xl:w-200 xl:h-100 md:h-90">
+                <div className="relative w-70 h-56 sm:h-75 overflow-hidden m-auto rounded-lg sm:w-140 md:w-170 xl:w-200 xl:h-100 md:h-90">
                   {slides.map((src, index) => (
                     <div
                       key={index}
@@ -413,18 +423,107 @@ export default function App() {
           </div>
         </div>
 
-        {/* About me info */}
+
+{/* Contacts */}
+
         <div ref={contacts} className="relative w-full h-screen">
-          <img src={bgContacts} alt="bg" className="w-full h-full  sticky object-cover brightness-40 blur-[3px]" />
-          <div className="absolute inset-0 text-center text-white flex justify-around items-center max-w-400 m-auto">
-            <div>
-              <h1 className="text-3xl font-bold mb-4 lg:text-6xl border-b-2 w-40 m-auto lg:w-80">Обо мне</h1>
-              <p className=" mr-4 ml-4 mb-4 lg:text-2xl max-w-200">Frontend-разработчик с фокусом на React и TypeScript.
-                Пишу декларативный, типизированный и поддерживаемый код с использованием современных практик: компонентный подход, хуки (useState, useEffect, useRef), управление состоянием, так же работа с DOM.
-                Уверенно применяю методы массивов (map, filter, reduce) для трансформации и визуализации данных.
-                Собираю и оптимизирую проекты с помощью Vite, стилизую интерфейсы через Tailwind CSS с учётом адаптивности и доступности.
-                Активно углубляюсь в архитектуру приложений и рассматриваю путь к full-stack разработке через интеграцию с REST API и серверными технологиями.
-              </p>
+          <img
+            src={bgContacts}
+            alt="Фон контактов"
+            className="absolute inset-0 w-full h-full object-cover brightness-40 blur-[3px]"
+          />
+
+          <div className="relative flex flex-col items-center justify-center h-full text-center text-white px-4">
+            <h2 className="text-4xl hidden sm:block md:text-5xl font-bold mb-2">Связь со мной</h2>
+            <p className="text-lg hidden sm:block md:text-xl mb-8 opacity-90 max-w-2xl">
+              Frontend-разработчик, специализируюсь на React, TypeScript и создании адаптивных, поддерживаемых интерфейсов.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl w-full px-4">
+              {/* Email */}
+              <a
+                href="mailto:turchin2003@outlook.com"
+                className="group bg-black/30 mt-40 sm:mt-0 hover:bg-black/50 backdrop-blur-sm p-4 rounded-2xl transition-all duration-300 flex flex-col items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={outlook}
+                  alt="Email"
+                  className="h-12 md:scale-150 md:mb-7 w-12 mb-3 group-hover:scale-170 transition-transform"
+                />
+                <span className="text-lg font-medium">turchin2003@outlook.com</span>
+              </a>
+
+              {/* Telegram */}
+              <a
+                href="https://t.me/fex_d"
+                className="group bg-black/30 hover:bg-black/50 backdrop-blur-sm p-5 rounded-2xl transition-all duration-300 flex flex-col items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={tg}
+                  alt="Telegram"
+                  className="h-12 md:scale-150 md:mb-7 w-12 mb-3 group-hover:scale-170 transition-transform"
+                />
+                <span className="text-lg font-medium">@fex_d</span>
+              </a>
+
+              {/* GitHub */}
+              <a
+                href="https://github.com/Fe1exxx"
+                className="group bg-black/30 hover:bg-black/50 backdrop-blur-sm p-5 rounded-2xl transition-all duration-300 flex flex-col items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={gitHub}
+                  alt="GitHub"
+                  className="h-12 md:scale-150 md:mb-7 w-12 mb-3 group-hover:scale-170 transition-transform"
+                />
+                <span className="text-lg font-medium">github.com/Fe1exxx</span>
+              </a>
+
+              {/* Вк */}
+
+              <a
+                href="https://vk.com/fe1exxx"
+                className="group bg-black/30 hover:bg-black/50 backdrop-blur-sm p-5 rounded-2xl transition-all duration-300 flex flex-col items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={vkLogo}
+                  alt="LinkedIn"
+                  className="h-12 md:scale-150 md:mb-7 w-12 mb-3 group-hover:scale-170 transition-transform"
+                />
+                <span className="text-lg font-medium">Максим Турчин</span>
+              </a>
+
+              <a
+                href="https://wa.me/89185654014"
+                className="group bg-black/30 hover:bg-black/50 backdrop-blur-sm p-5 rounded-2xl transition-all duration-300 flex flex-col items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={whatsapp}
+                  alt="LinkedIn"
+                  className="h-12 md:scale-150 md:mb-7 w-12 mb-3 group-hover:scale-170 transition-transform"
+                />
+                <span className="text-lg font-medium">Whatsapp</span>
+              </a>
+
+              <div className="bg-black/30 p-5 rounded-2xl flex flex-col items-center justify-center">
+                <img
+                  src={location}
+                  alt="Локация"
+                  className="h-12 md:scale-150 md:mb-5 w-12 mb-3"
+                />
+                <span className="text-lg font-medium">Ростов-на-Дону, Россия</span>
+                <span className="text-sm opacity-80 mt-1">Готов к удалённой работе</span>
+              </div>
             </div>
           </div>
         </div>

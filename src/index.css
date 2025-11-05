@@ -16,6 +16,10 @@ body {
   animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
+.strokeText {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+}
+
 @keyframes myAnim {
   0% {
     animation-timing-function: ease-out;
